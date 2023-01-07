@@ -22,7 +22,7 @@ After running `normalize.py` on each of the original files, we have 2 clean file
 
 The contents of `compared.diff` file can be copy/pasted into the [*diff2htmlui* template](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples). This gives you a standalone, stacic HTML file that can be hosted anywhere. 
 
-Or you can use SSI to include the diff file into the template instead of copy/pasting: `<!--#include virtual="comp.diff" -->`
+Or you can use SSI to include the diff file into the template instead of copy/pasting: `<!--#include virtual="compared.diff" -->`
 
 ## Viewing the Results
 **https://cmp.mrgreekgeek.com/**
