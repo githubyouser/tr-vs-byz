@@ -1,14 +1,30 @@
-# tr-vs-byz
-## A comparison between the Byzantine Textform and the KJV Textus Receptus
+# A comparison between the Byzantine Textform and the KJV Textus Receptus
+
+## Source Files
 
 * [Textus Receptus source](https://github.com/Center-for-New-Testament-Restoration/KJTR/blob/main/KJTR.txt)  
 * [Byzantine text source](https://github.com/byztxt/byzantine-majority-text/tree/master/csv-unicode/accents/no-variants)
 
-All the accents and uppercase letters were stripped using `remove_accents.py` (adapted from [djemos/remove_accents.py](https://github.com/djemos/remove_accents.py/blob/master/remove_accents.py))  
-Punctuation `[.,'·:;ʼ!]` was also stripped.  
+## Cleaning up the files
 
-Unfortunately, Github can't compare files this large, so you'll have to view the comparison [somewhere else](https://cmp.mrgreekgeek.com/). 
+The files need to be normalized so that we can compare *just* the Greek text itself. We need to do the following:
+* Strip all Greek polytonic accents and breathing marks
+* Remove the header information from the files
+* Remove all book/chapter/verse numbers
+* Remove all punctuation
 
-The comparison was made using [Diff2HtmlUI](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples)  
-* Generate a diff file `git diff file1 file2 > compared.diff` 
-* Copy/paste the contents of the diff file into the sample found [here](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples) (right after `const diffString =`)
+## Usage
+Just run `python normalize.py <input_filename> <output_filename>` to clean up a file.
+
+After running `normalize.py` on each of the original files, we have 2 clean files that can be directly compared as a diff.   
+
+`git diff KJTR.txt BYZ.txt > compared.diff`  
+
+The contents of `compared.diff` file can be copy/pasted into the [*diff2htmlui* template](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples). This gives you a standalone, stacic HTML file that can be hosted anywhere. 
+
+Or you can use SSI to include the diff file into the template instead of copy/pasting: `<!--#include virtual="comp.diff" -->`
+
+## Viewing
+**https://cmp.mrgreekgeek.com/**
+
+Now you can view the file in your favorite web browser! It's pretty big, so it takes a lot of resources. 
