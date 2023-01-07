@@ -1,3 +1,4 @@
+# Original source: https://github.com/djemos/remove_accents.py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
