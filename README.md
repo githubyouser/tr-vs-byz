@@ -8,3 +8,7 @@ All the accents and uppercase letters were stripped using `remove_accents.py` (a
 Punctuation `[.,'·:;ʼ!]` was also stripped.  
 
 Unfortunately, Github can't compare files this large, so you'll have to view the comparison [somewhere else](https://cmp.mrgreekgeek.com/). 
+
+The comparison was made using [Diff2HtmlUI](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples)  
+* Generate a diff file `git diff file1 file2 > compared.diff` 
+* Copy/paste the contents of the diff file into the sample found [here](https://github.com/rtfpessoa/diff2html#diff2htmlui-examples) (right after `const diffString =`)
