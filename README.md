@@ -7,4 +7,4 @@
 All the accents and uppercase letters were stripped using `remove_accents.py` (adapted from [djemos/remove_accents.py](https://github.com/djemos/remove_accents.py/blob/master/remove_accents.py))  
 Punctuation `[.,'·:;ʼ!]` was also stripped.  
 
-Unfortunately, Github can't compare files this large, so you'll have to download them and compare them yourself using your favorite method. 
+Unfortunately, Github can't compare files this large, so you'll have to view the comparison [somewhere else](https://cmp.mrgreekgeek.com/). 
