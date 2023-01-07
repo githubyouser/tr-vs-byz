@@ -2,8 +2,8 @@
 
 ## Source Files
 
-* [Textus Receptus source](https://github.com/Center-for-New-Testament-Restoration/KJTR/blob/main/KJTR.txt)  
-* [Byzantine text source](https://github.com/byztxt/byzantine-majority-text/tree/master/csv-unicode/accents/no-variants)
+* Bunning, Alan, ed. [*King James Textus Receptus Greek New Testament.*](https://github.com/Center-for-New-Testament-Restoration/KJTR/blob/main/KJTR.txt) Center for New Testament Restoration. 2014. ([CC BY 4.0](https://github.com/Center-for-New-Testament-Restoration/KJTR#license))
+* Dr. Maurice A. Robinson, [*The New Testament in the original Greek: Byzantine textform*](https://github.com/byztxt/byzantine-majority-text/tree/master/csv-unicode/accents/no-variants). Wake Forest, North Carolina, USA ([Public Domain](https://github.com/byztxt/byzantine-majority-text#license))
 
 ## Cleaning up the files
 
@@ -13,7 +13,7 @@ The files need to be normalized so that we can compare *just* the Greek text its
 * Remove all book/chapter/verse numbers
 * Remove all punctuation
 
-## Usage
+## Script Usage
 Just run `python normalize.py <input_filename> <output_filename>` to clean up a file.
 
 After running `normalize.py` on each of the original files, we have 2 clean files that can be directly compared as a diff.   
@@ -24,7 +24,7 @@ The contents of `compared.diff` file can be copy/pasted into the [*diff2htmlui* 
 
 Or you can use SSI to include the diff file into the template instead of copy/pasting: `<!--#include virtual="comp.diff" -->`
 
-## Viewing
+## Viewing the Results
 **https://cmp.mrgreekgeek.com/**
 
 Now you can view the file in your favorite web browser! It's pretty big, so it takes a lot of resources. 
