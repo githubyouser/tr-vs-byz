@@ -7,8 +7,11 @@
 
 ## Cleaning up the files
 
-The files need to be normalized so that we can compare *just* the Greek text itself. We need to do the following:
+The Byzantine GNT is one file per book, so they need concatenated into one continuous file. On Windows it's easy enough (after renaming them so they are copied in the proper order). `copy /b *.csv BYZ-combined.txt`
+
+Then both the TR and BYZ files need to be normalized so that we can compare *just* the Greek text itself. We need to do the following:
 * Strip all Greek polytonic accents and breathing marks
+* Convert all letters to lowercase 
 * Remove the header information from the files
 * Remove all book/chapter/verse numbers
 * Remove all punctuation
